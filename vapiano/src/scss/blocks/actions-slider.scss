@@ -1,0 +1,43 @@
+.actions-slider {
+    @include reset-list;
+
+    &__slide {
+        margin-bottom: 25px;
+    }
+
+    &__items {
+        @include reset-list;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item {
+        border: 1px solid $color-orange;
+        padding: 10px 8px;
+    }
+
+    &__item-image {
+        display: block;
+        width: 215px;
+        height: 276px;
+    }
+
+    &__buttons {
+        @include reset-list;
+        text-align: center;
+    }
+
+    &__button {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        outline: 2px solid $color-orange;
+        background-color: transparent;
+        transform: rotate(45deg);
+        margin-right: 14px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "DidotLH Italic";
+    src: url("../fonts/Didot_Italic.ttf");
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $color-grey-dark;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

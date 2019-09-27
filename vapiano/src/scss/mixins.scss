@@ -1,0 +1,96 @@
+@mixin container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin header-decor-line {
+    height: 1.3px;
+    background-color: white;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+}
+
+//section header style
+@mixin header-block {
+    background-color: #232325;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+@mixin header-title {
+    position: relative;
+    margin: 0;
+    color: white;
+    font-family: "DidotLH Italic";
+    font-size: 36px;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-orange;
+
+    &::after {
+        position: absolute;
+        display: inline-block;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 4px;
+        width: 60px;
+        background-color: $color-orange;
+        content: "";
+    }
+}
+
+//form styles
+@mixin label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-grey-dark;
+    margin-bottom: 5px;
+}
+
+@mixin input {
+    border: 1px solid $color-orange;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+@mixin button {
+    box-sizing: border-box;
+    border: 1px solid $color-orange;
+    background-color: transparent;
+    padding: 15px 80px 15px 80px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-grey-dark;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $color-orange;
+        color: white;
+    }
+
+    &:active {
+        background-color: $color-orange-darker;
+    }
+}
+
+//decorative box
+@mixin decor-box {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    outline: 2px solid $color-orange;
+    background-color: $color-orange;
+    transform: rotate(45deg);
+}

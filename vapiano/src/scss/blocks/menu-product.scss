@@ -1,0 +1,135 @@
+.menu-product {
+    display: flex;
+
+    &__main {
+        width: 50%;
+        position: relative;
+    }
+
+    &:nth-child(even) &__main {
+        order: 1;
+    }
+
+    &__picture-wrapper {
+        position: absolute;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            border-top: 250px solid transparent;
+            border-right: 250px solid white;
+            content: "";
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(250, 214, 172, 0.3) 50%,
+                rgba(184, 58, 0, 0.7) 100%
+            );
+            height: 232px;
+            width: 349px;
+            content: "";
+        }
+    }
+
+    &:nth-child(even) &__picture-wrapper {
+        right: 0;
+    }
+
+    &:nth-child(even) &__picture-wrapper::after {
+        background-image: linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(250, 214, 172, 0.3) 50%,
+            rgba(184, 58, 0, 0.7) 100%
+        );
+    }
+
+    &:nth-child(even) &__picture-wrapper::before {
+        left: 0;
+        border-top: 250px solid transparent;
+        border-left: 250px solid white;
+        border-right: none;
+    }
+
+    &__picture {
+        height: 232px;
+        width: 349px;
+        position: relative;
+    }
+
+    &__description {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        text-align: right;
+        padding-top: 25px;
+        padding-right: 30px;
+
+        &::after {
+            display: block;
+            position: absolute;
+            right: 30px;
+            bottom: -20px;
+            background-image: url(../img/decoration-orng.svg);
+            width: 45px;
+            height: 8px;
+            content: "";
+        }
+
+        h3 {
+            font-family: "DidotLH Italic";
+            font-size: 31px;
+            font-weight: lighter;
+            color: $color-description-text;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 21px;
+            color: $color-description-text;
+        }
+    }
+
+    &:nth-child(even) &__description {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    &:nth-child(even) &__description::after {
+        left: 15px;
+    }
+
+    &__price-wrapper {
+        box-sizing: border-box;
+        width: 50%;
+        padding-top: 60px;
+        padding-left: 208px;
+    }
+
+    &:nth-child(even) &__price-wrapper {
+        padding-left: 130px;
+    }
+
+    &__price {
+        height: 100px;
+        width: 140px;
+        background-image: url(../img/dish.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-family: "DidotLH Italic";
+        font-size: 24px;
+        color: #28272a;
+        box-sizing: border-box;
+        padding-top: 35px;
+    }
+    
+}

@@ -1,0 +1,60 @@
+.footer {
+    background-color: $color-footer-background;
+
+    &__wrapper {
+        @include container;
+        position: relative;
+        padding-top: 316px;
+    }
+
+    &__author-info-wrapper {
+        position: absolute;
+        width: 100%;
+        top: -66px;
+    }
+
+    &__content {
+        padding: 13px;
+    }
+
+    &__info {
+        @include reset-list;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & p,
+        & h3 {
+            font-size: 11px;
+            line-height: 21px;
+            font-weight: normal;
+            color: white;
+            margin: 0;
+        }
+
+        & h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__copyright-logo {
+        display: inline-block;
+        height: 32px;
+        width: 33px;
+        background-image: url(../img/bartender.png);
+        background-size: cover;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    &__copyright-bottom-row {
+        display: flex;
+        justify-content: space-between;
+    }
+}

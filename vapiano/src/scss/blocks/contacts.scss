@@ -1,0 +1,58 @@
+.contacts {
+    @include container;
+
+    &__header {
+        @include header-block;
+        margin-bottom: 55px;
+    }
+
+    &__header-title {
+        @include header-title;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 130px;
+    }
+
+    &__form {
+        width: 50%;
+    }
+
+    &__form-name input,
+    &__form-lastname input {
+        @include input;
+        width: 282px;
+        margin-bottom: 25px;
+    }
+
+    &__form-name label,
+    &__form-lastname label {
+        @include label;
+    }
+
+    &__form-message textarea {
+        @include input;
+        width: 461px;
+        height: 190px;
+        margin-bottom: 22px;
+        resize: none;
+    }
+
+    &__form-message label {
+        @include label;
+    }
+
+    &__form-submit {
+        @include button;
+    }
+
+    &__map-wrapper {
+        border: 1px solid $color-orange;
+        padding: 13px;
+        height: 233px;
+        width: 470px;
+    }
+}

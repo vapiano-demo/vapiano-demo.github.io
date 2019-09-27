@@ -1,0 +1,17 @@
+.main {
+    &__menu-wrapper {
+        margin-bottom: 30px;
+    }
+
+    &__actions-wrapper {
+        margin-bottom: 25px;
+    }
+
+    &__products-wrapper {
+        background-color: $color-beige;
+    }
+
+    &__contacts-wrapper {
+        background-color: $color-beige; 
+    }
+}

@@ -1,0 +1,52 @@
+.author-info {
+    box-sizing: border-box;
+    background-color: white;
+    padding-top: 61px;
+    padding-left: 50px;
+    min-height: 321px;
+
+    &__header {
+        font-family: "DidotLH Italic";
+        font-size: 36px;
+        line-height: 45px;
+        font-weight: lighter;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    &__separator {
+        position: relative;
+        height: 1px;
+        width: 255px;
+        margin-left: 20px;
+        margin-bottom: 25px;
+        background-color: $color-orange;
+
+        &::before {
+            @include decor-box;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -5px;
+            left: -14px;
+            content: "";
+        }
+
+        &::after {
+            @include decor-box;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -5px;
+            right: -14px;
+            content: "";
+        }
+    }
+
+    &__text {
+        font-family: "DidotLH Italic";
+        font-size: 18px;
+        line-height: 45px;
+        font-weight: lighter;
+    }
+}

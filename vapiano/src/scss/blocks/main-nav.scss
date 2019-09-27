@@ -1,0 +1,42 @@
+.main-nav {
+    @include reset-list;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__item {
+        flex-grow: 1;
+        text-align: center;
+        border-right: 1px solid $color-beige-lighter;
+
+        &:first-child {
+            border-left: 1px solid $color-beige-lighter;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        transition: .2s;
+
+        &:hover,
+        &:focus {
+            color: $color-orange;
+        }
+
+        &:active {
+            color: $color-grey;
+        }
+
+        &--selected,
+        &--selected:hover,
+        &--selected:focus {
+            background-color: white;
+            color: $color-grey-darker;
+        }
+    }
+}

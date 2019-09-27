@@ -1,0 +1,30 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+//custom glide js active bullets style
+.#{$glide-class} {
+    $se: $glide-element-separator;
+    $sm: $glide-modifier-separator;
+
+    &#{$se}bullet {
+        &#{$sm}active.actions-slider__button {
+            box-sizing: border-box;
+            background-clip: padding-box;
+            border: 2px solid transparent;
+            background-color: $color-orange;
+        }
+
+        &:hover.actions-slider__button,
+        &:focus.actions-slider__button {
+            outline: 2px solid $color-orange-darker;
+        }
+
+        &#{$sm}active.header__slider-nav-item {
+            outline: 2px solid white;
+        }
+
+        &:hover.header__slider-nav-item,
+        &:focus.header__slider-nav-item {
+            background-color: white;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.hdr-slide {
+    @include container;
+    box-sizing: border-box;
+    padding: 185px 245px 130px 245px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+
+    &__rows-wrapper {
+        position: relative;
+        
+        &::before {
+            display: block;
+            position: absolute;
+            width: 260px;
+            @include header-decor-line;
+            left: 230px;
+            content: "";
+        }
+    
+        &::after {
+            display: block;
+            position: absolute;
+            width: 175px;
+            @include header-decor-line;
+            bottom: -130px;
+            content: "";
+        }
+    }
+
+    &__top-row {
+        position: relative;
+        margin-bottom: 4px;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: -7px;
+            left: 25px;
+            background-image: url(../img/decoration.svg);
+            width: 45px;
+            height: 8px;
+            content: "";
+        }
+    }
+
+    &__caption {
+        margin: 0;
+        font-size: 63px;
+    }
+
+    &__bottom-row {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__line {
+        background-color: white;
+        height: 6px;
+        width: 50px;
+        margin-right: 55px;
+    }
+
+    &__phone {
+        margin: 0;
+        font-size: 14px;
+    }
+}

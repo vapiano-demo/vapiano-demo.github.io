@@ -1,0 +1,36 @@
+.menu {
+    @include container;
+
+    &__header {
+        @include header-block;
+        margin-bottom: 55px;
+    }
+
+    &__header-title {
+        @include header-title;
+    }
+
+    &__products {
+        @include reset-list;
+        margin-bottom: 70px;
+    }
+
+    &__products-item {
+        margin-bottom: 80px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__note {
+        text-align: center;
+        font-family: "DidotLH Italic";
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__note-text {
+        margin: 0;
+    }
+}

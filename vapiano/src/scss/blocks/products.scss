@@ -1,0 +1,78 @@
+.products {
+    @include container;
+    padding-bottom: 28px;
+
+    &__header {
+        @include header-block;
+        margin-bottom: 55px;
+    }
+
+    &__header-title {
+        @include header-title;
+    }
+
+    &__tiles {
+        @include reset-list;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__tile-wrapper {
+        border: 1px solid $color-orange;
+        padding: 10px;
+        margin-bottom: 53px;
+    }
+
+    &__tile {
+        background-color: white;
+        width: 425px;
+        height: 260px;
+        display: flex;
+    }
+
+    &__tile-text-section {
+        box-sizing: border-box;
+        padding: 15px;
+        width: 277px;
+    }
+
+    /*дополнительная обертка для заголовка и описания на случай переполнения*/
+    &__tile-text-wrapper {
+        max-height: 220px;
+        overflow: auto;
+    }
+
+    &__tile-title {
+        margin: 0;
+        font-family: "DidotLH Italic";
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 40px;
+    }
+
+    &__tile-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__tile-link-wrapper {
+        max-height: 5%;
+    }
+
+    &__tile-link {
+        font-size: 14px;
+        color: $color-grey-dark;
+
+        &:hover {
+            font-size: 14px;
+            color: $color-orange;
+        }
+    }
+
+    &__tile-image {
+        display: block;
+        height: 260px;
+        width: 159px;
+    }
+}
